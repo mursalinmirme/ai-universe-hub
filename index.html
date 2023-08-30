@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ai Universe Hub</title>
+    <!-- tailwind and daisy ui link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- work sans font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- font awsome link -->
+    <script src="https://kit.fontawesome.com/6d208b1cbc.js" crossorigin="anonymous"></script>\
+    <!-- custom tailwind class making -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: {
+                'fontWorks': ['Work Sans', 'sans-serif'],
+              },
+            },
+          },
+        };
+      </script>
+</head>
+<body class="font-fontWorks">
+    <!-- header -->
+    <header class="text-center py-5">
+        <h1 class="text-3xl font-bold">AI Universe Hub</h1>
+        <button class="bg-orange-600 text-white font-medium rounded-lg px-4 py-2 mt-4">Sort By Date</button>
+    </header>
+    <main>
+        <section class="w-11/12 mx-auto mt-2">
+            <div id="itemContainer" class="grid grid-cols-2 lg:grid-3 gap-10">
+               
+            </div>
+        </section>
+        <section>
+          <!-- modal wrapper -->
+          <div class="flex gap-4">
+            <!-- discription -->
+            <div class="flex-1 shadow border border-red-500 bg-red-50 rounded-xl p-5">
+              <h3 class="text-lg font-semibold">ChatGPT is an AI-powered chatbot platform that uses OpenAI's GPT technology to simulate human conversation.</h3>
+              <!-- subscription packege -->
+              <div class="flex gap-4">
+                <div class="py-3 text-center flex items-center justify-center w-36 text-base font-semibold text-green-700 rounded-xl bg-white">
+                  $10/<br>
+                  month<br>
+                  Basic
+                </div>
+                <div class="py-3 text-center flex items-center justify-center w-36 text-base font-semibold text-orange-500 rounded-xl bg-white">
+                  $50/<br>
+                  month<br>
+                  Basic
+                </div>
+                <div class="py-3 text-center flex items-center justify-center w-36 text-base font-semibold text-red-500 rounded-xl bg-white">
+                  Contact<br>
+                  us<br>
+                  Enterprise
+                </div>
+              </div>
+              <!-- features and integrations container -->
+              <div class="flex justify-between mt-5">
+                <!-- feature -->
+                <div class="">
+                  <h2 class="text-xl font-semibold">Features</h2>
+                  <ul>
+                    <li>Customizable responses</li>
+                    <li>Multilingual support</li>
+                    <li>Seamless integration</li>
+                  </ul>
+                </div>
+                <!-- integrations -->
+                <div>
+                  <h2>Integrations</h2>
+                  <ul>
+                    <li>FB Messenger</li>
+                    <li>Slack</li>
+                    <li>Telegram</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- image and title -->
+            <div class="flex-1 shadow border rounded-xl p-5">
+              <div class="relative">
+                <img class="rounded-xl" src="jaspar-chat.jpg" alt="">
+                <span class="absolute top-2 right-2 bg-red-500 rounded-lg px-3 py-1 text-white text-sm font-medium">94% accuracy</span>
+              </div>
+              <h2 class="text-center text-xl font-semibold py-4">Hi, how are you doing today?</h2>
+              <p class="text-center text-sm px-3">I'm doing well, thank you for asking. How can I assist you today?</p>
+            </div>
+          </div>
+        </section>
+    </main>
+    <footer>
+        <br>
+        <br>
+        <br>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </footer>
+    <!-- javascript link -->
+    <script src="script.js"></script>
+</body>
+</html>
