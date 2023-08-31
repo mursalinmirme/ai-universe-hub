@@ -78,15 +78,15 @@ const showItemModal = async (modalId) => {
           <div class="flex flex-col-reverse lg:flex-row gap-4 bg-white p-4 md:p-20 relative lg:rounded-xl">
             <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 text-white bg-red-500">✕</button>
             <!-- discription -->
-            <div class="flex-1 shadow border border-red-500 bg-red-50 rounded-xl p-5">
+            <div class="flex-1 shadow border border-red-500 bg-red-50 rounded-xl p-3 md:p-5">
               <h3 class="text-lg font-semibold">${getData?.description}</h3>
               <!-- subscription packege -->
-              <div class="flex gap-4 mt-5">
-                <div class="py-3 text-center flex flex-col items-center justify-center w-1/3 text-base font-semibold text-green-700 rounded-xl bg-white">
+              <div class="flex gap-2 md:gap-4 mt-5">
+                <div class="py-3 text-center flex flex-col items-center justify-center w-1/3 text-sm md:text-base font-semibold text-green-700 rounded-xl bg-white">
                  <span>${getData?.pricing ? getData?.pricing[0].price : 'free'}</span>
                  <span>${getData?.pricing ? getData?.pricing[0].plan : 'free'}</span>
                 </div>
-                <div class="py-3 text-center flex flex-col items-center justify-center w-1/3 text-base font-semibold text-orange-500 rounded-xl bg-white">
+                <div class="py-3 text-center flex flex-col items-center justify-center w-1/3 text-sm md:text-base font-semibold text-orange-500 rounded-xl bg-white">
                 <span>${getData?.pricing ? getData?.pricing[1]?.price : 'free'}</span>
                 <span>${getData?.pricing ? getData?.pricing[1]?.plan : 'free'}</span>
                 </div>
@@ -120,7 +120,7 @@ const showItemModal = async (modalId) => {
             <!-- image and title -->
             <div class="flex-1 shadow rounded-xl p-5">
               <div class="relative">
-                <img class="rounded-xl w-full h-60" src="${getData?.image_link[0]}" alt="">
+                <img class="rounded-xl w-full h-auto md:h-60" src="${getData?.image_link[0]}" alt="">
                 <span class="absolute top-2 right-2 bg-red-500 rounded-lg px-3 py-1 text-white text-sm font-medium">${concurrency}% accuracy</span>
               </div>
               <h2 class="text-center text-xl font-semibold py-4">${getData.input_output_examples ? getData.input_output_examples[0].input : 'No result'}</h2>
