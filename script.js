@@ -76,7 +76,7 @@ const showItemModal = async (modalId) => {
     <form method="dialog" class="">
           <!-- modal wrapper -->
           <div class="flex flex-col-reverse lg:flex-row gap-4 bg-white p-4 md:p-20 relative lg:rounded-xl">
-            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 text-white bg-red-500">✕</button>
+            <button class="btn btn-sm btn-circle btn-ghost absolute right-1 top-1 md:right-2 md:top-2 text-white bg-red-500">✕</button>
             <!-- discription -->
             <div class="flex-1 shadow border border-red-500 bg-red-50 rounded-xl p-3 md:p-5">
               <h3 class="text-lg font-semibold">${getData?.description}</h3>
@@ -118,10 +118,10 @@ const showItemModal = async (modalId) => {
               </div>
             </div>
             <!-- image and title -->
-            <div class="flex-1 shadow rounded-xl p-5">
+            <div class="flex-1 shadow rounded-xl p-3 md:p-5">
               <div class="relative">
                 <img class="rounded-xl w-full h-auto md:h-60" src="${getData?.image_link[0]}" alt="">
-                <span class="absolute top-2 right-2 bg-red-500 rounded-lg px-3 py-1 text-white text-sm font-medium">${concurrency}% accuracy</span>
+                <span class="absolute top-2 right-2 bg-red-500 text-xs md:text-base rounded-lg px-3 py-1 text-white font-medium">${concurrency}% accuracy</span>
               </div>
               <h2 class="text-center text-xl font-semibold py-4">${getData.input_output_examples ? getData.input_output_examples[0].input : 'No result'}</h2>
               <p class="text-center text-sm px-3">${getData.input_output_examples ? getData.input_output_examples[0].output : 'No result'}</p>
