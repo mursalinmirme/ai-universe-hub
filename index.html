@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- font awsome link -->
-    <script src="https://kit.fontawesome.com/6d208b1cbc.js" crossorigin="anonymous"></script>\
+    <script src="https://kit.fontawesome.com/6d208b1cbc.js" crossorigin="anonymous"></script>
     <!-- custom tailwind class making -->
     <script>
         tailwind.config = {
@@ -30,13 +30,15 @@
     <!-- header -->
     <header class="text-center py-5">
         <h1 class="text-3xl font-bold">AI Universe Hub</h1>
-        <button class="bg-orange-600 text-white font-medium rounded-lg px-5 py-3 mt-5">Sort By Date</button>
+        <button class="bg-orange-600 text-white font-medium text-sm md:text-base rounded-lg px-5 py-3 mt-5 hover:bg-orange-300 hover:text-gray-600">Sort By Date</button>
     </header>
     <main>
         <section class="w-11/12 mx-auto mt-4">
-            <div id="itemContainer" class="grid grid-cols-2 lg:grid-cols-3 gap-10">
+            <div id="itemContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             </div>
-            <button class="block mx-auto mt-10 mb-10 font-medium bg-red-500 text-white px-5 py-3 text-lg rounded-lg">See More</button>
+            <div class="text-center">
+              <button onclick="showAllHandle()" id="show-all-btn" class="mt-10 font-medium bg-red-500 text-white px-5 py-3 text-sm md:text-base rounded-lg hover:bg-red-400 hover:text-gray-700 hidden">See More</button>
+            </div>
         </section>
         <section>
 
@@ -44,7 +46,7 @@
           <!-- You can open the modal using ID.showModal() method -->
           <!-- <button class="btn" onclick="showModal.showModal()">open modal</button> -->
 
-          <dialog id="showModal" class="modal w-2/3 mx-auto">
+          <dialog id="showModal" class="modal w-full lg:w-2/3 mx-auto overflow-y-scroll lg:overflow-y-hidden">
             <!-- modal container -->
             <div id="modalContainer">
 
@@ -56,7 +58,7 @@
         </section>
     </main>
     <footer>
-      <p class="text-center mb-3">© All right reserved by Mursalin Mir</p>
+      <p class="text-center mb-3 mt-10">© All right reserved by Mursalin Mir</p>
     </footer>
     <!-- javascript link -->
     <script src="script.js"></script>
