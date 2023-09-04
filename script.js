@@ -1,19 +1,33 @@
 // show all items
-const showAllAiTools = async (isShowAll) => {
+let isSortingActive = null;
+
+const loadAiTools = async (isAllActive) => {
     const apiUrl = 'https://openapi.programming-hero.com/api/ai/tools';
     const response = await fetch(apiUrl);
     const data = await response.json();
-    let allAi = data.data.tools;
+    const allData = data.data.tools;
+    showAllAiTools(allData, isAllActive);
+}
+
+
+const showAllAiTools = (allData, isAllActive) => {
+// console.log(allData)
+  let allAi = allData;
     // if api image has not working
-    let jasparChat = data.data.tools[5];
-    jasparChat.image = 'jaspar-chat.jpg';
-    console.log(allAi);
+    if(!isSortingActive){
+      let jasparChat = allAi[5];
+      jasparChat.image = 'jaspar-chat.jpg';
+    }else{
+      let jasparChat = allAi[10];
+      jasparChat.image = 'jaspar-chat.jpg';
+    }
     const itemContainer = document.getElementById('itemContainer');
-    if(!isShowAll){
+    itemContainer.innerHTML = '';
+    if(!isAllActive){
       allAi = allAi.slice(0, 6)
     }
     const showAllBtn = document.getElementById('show-all-btn');
-    if(isShowAll){
+    if(isAllActive){
       showAllBtn.classList.add('hidden');
     }else{
       showAllBtn.classList.remove('hidden');
@@ -52,7 +66,7 @@ const showAllAiTools = async (isShowAll) => {
     
 }
 
-showAllAiTools();
+loadAiTools();
 
 // show signle item modal
 const showItemModal = async (modalId) => {
@@ -136,10 +150,26 @@ const showItemModal = async (modalId) => {
 
 // handle show all btn
 const showAllHandle = () =>{
-  showAllAiTools(true);
+  if(!isSortingActive){
+    loadAiTools(true);
+  }else{
+    sortBtnHandelar(true);
+  }
+
 }
 
-
+// show btn handelar start here
+const sortBtnHandelar = async (isAllActive) => {
+    const apiUrl = 'https://openapi.programming-hero.com/api/ai/tools';
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+    const respData = data.data.tools;
+    console.log(respData)
+    respData.sort((a, b) => new Date(a.published_in) - new Date(b.published_in));
+    showAllAiTools(respData, isAllActive);
+    isSortingActive = true;
+    document.getElementById('sortBtn').classList.add('bg-orange-300');
+}
 
 
 
